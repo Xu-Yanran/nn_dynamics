@@ -2,6 +2,7 @@ import copy
 import time
 import tensorflow as tf
 import numpy as np 
+import logging
 
 #import rllab envs
 from rllab.envs.normalized_env import normalize
@@ -68,7 +69,7 @@ def create_env(which_agent):
 
     #set vars
     tf.set_random_seed(2)
-    gym.logger.setLevel(gym.logging.WARNING)
+    gym.logger.setLevel(logging.WARNING)
     dimO = env.observation_space.shape
     dimA = env.action_space.shape
     print ('--------------------------------- \nState space dimension: ', dimO)
